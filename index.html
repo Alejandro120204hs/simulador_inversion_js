@@ -19,23 +19,23 @@
                 <form>
                     <div class="group-data two-columns">
                         <label for="#">Nombres y Apellidos:</label>
-                        <input type="text" placeholder="Escribe aquí">
+                        <input type="text" placeholder="Escribe aquí" id="nombre">
                     </div>
                     <div class="group-data two-columns">
                         <label for="#">Teléfono:</label>
-                        <input type="number" placeholder="Escribe aquí">
+                        <input type="number" placeholder="Escribe aquí" id="telefono">
                     </div>
                     <div class="group-data one-column">
                         <label for="#">Email:</label>
-                        <input type="email" placeholder="Escribe aquí">
+                        <input type="email" placeholder="Escribe aquí" id="email">
                     </div>
                     <div class="group-data two-columns">
                         <label for="#">Monto a Invertir:</label>
-                        <input type="number" placeholder="Escribe aquí">
+                        <input type="number" placeholder="Escribe aquí" id="inversion">
                     </div>
                     <div class="group-data two-columns">
                         <label for="#">Tiempo de Inversión:</label>
-                        <select>
+                        <select id="tiempo">
                             <option>Elige una opción</option>
                             <option value="">1 Año</option>
                             <option value="">2 Años</option>
@@ -43,16 +43,16 @@
                         </select>
                     </div>
 
-                    <button>CALCULAR</button>
+                    <button id="calcular" type="button">CALCULAR</button>
                 </form>
 
             </div>
             <div class="right">
-                <div class="pre-simulation  ">
-                    <img src="img/income.png" alt="">
+                <div class="pre-simulation" id="pre-simulation">
+                    <img src="img/undraw_investment-data_frxx.png" alt="">
                 </div>
                 <!-- La clase disabled debe ponerse en el contendor anterior para mostrar el resultado -->
-                <div class="post-simulation  disabled">
+                <div class="post-simulation  disabled" id="post-simulation">
                     <h3>Teniendo en cuenta que tu tiempo de inversión fue de <span>12 MESES</span> te pagaremos el <span>1.6%</span> de interés mensual.</h3>
 
                     <div class="total ">
@@ -72,5 +72,8 @@
         </div>
         
     </section>
+
+
+    <script src="js/main.js"></script>
 </body>
 </html>

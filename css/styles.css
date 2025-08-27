@@ -23,7 +23,7 @@ h1{
     color: #0F3057;
     text-align: center;
     padding-bottom: 50px;
-    border-bottom: 2px solid #7a93ab;
+    border-bottom: 2px solid #0F3057;
 }
 
 .cont-flex{
@@ -154,21 +154,24 @@ input::placeholder {
 }
 
 .right .total{
-    background: #1c988259;
+    background: #0F3057;
     padding: 30px;
 }
 
 .right .total h4{
     font-size: 28px;
+    color: white;
 }
 
 .right .total h2{
     font-size: 36px;
     padding: 14px 0;
+    color: white;
 }
 
 .total p{
     font-weight: 400;
+    color: white;
 }
 
 .total p span{
