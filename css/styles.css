@@ -1,13 +1,10 @@
-@font-face {
-    font-family: 'Montserrat'; 
-    src: url('Montserrat-VariableFont_wght.ttf') format('truetype'); /* Ruta relativa o absoluta de tu archivo .ttf */
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 #simulator{
@@ -16,13 +13,14 @@
     padding: 50px 60px;
     border: 1px solid #dde0e8;
     margin: 100px auto;
-    box-shadow: 0 0 3em #dfdfdf;
+    box-shadow: 0 0 3em  #0F3057;
+    border-radius: 5px;
 }
 
 h1{
     font-size: 34px;
     font-weight: 700;
-    color: #1c9882;
+    color: #0F3057;
     text-align: center;
     padding-bottom: 50px;
     border-bottom: 2px solid #7a93ab;
@@ -92,17 +90,17 @@ form button{
     display: block;
     width: 97%;
     padding: 14px 80px;
-    background: #1c9882;
+    background: #0F3057;
     color: #fff;
-    border: 1px solid #1c9882;
+    border: 1px solid #0F3057;
     transition: .4s;
     cursor: pointer;
 }
 
 form button:hover{
     background: #f5f8fa;
-    border: 1px solid #1c9882;
-    color: #1c9882;
+    border: 1px solid #0F3057;
+    color: #0F3057;
 }
 
 input, select{
@@ -150,7 +148,7 @@ input::placeholder {
 }
 
 .right .post-simulation h3 span{
-    color: #1c9882;
+    color: #0F3057;
     font-weight: 600;
     font-size: 24px;
 }
@@ -179,7 +177,7 @@ input::placeholder {
 
 .notificacion{
     padding: 20px;
-    border: 1px solid #1c9882;
+    border: 1px solid #0F3057;
     margin-top: 40px;
 }
 
