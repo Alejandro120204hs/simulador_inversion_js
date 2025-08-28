@@ -15,6 +15,10 @@ function simulador(){
     const sNombres = document.getElementById('sNombres');
     const sCorreo = document.getElementById('sCorreo');
 
+    //HACEMOS LA FUNCION PARA QUITAR EL DISABLED A POST-SIMULATION Y COLOCARSELO A PRE-SIMULATION
+    const contPre = document.getElementById('pre-simulation');
+    const contPost = document.getElementById('post-simulation');
+
     //DECLARAMOS LAS VARIABLES PARA LA GANANCIA Y EL TOTAL
     let ganancia = 0;
     let total = 0;
@@ -24,7 +28,8 @@ function simulador(){
         alert("Porfavor llene todos los campos");
     }else{
 
-    
+        contPost.classList.remove('disabled');
+        contPre.classList.add('disabled');
 
         //IDENTIFICAMOS EL VALOR DEL TIEMPO DE LA INVERSION Y DEPENDIENDO EL TIEMPO SE DARA UNA TASA DE INTERES
         switch (cTiempo) {
@@ -50,20 +55,15 @@ function simulador(){
                 sTiempo.textContent = "36 MESES"
                 break;
         }
+    
+
+        sTotal.textContent = total;
+        sGanancia.textContent = ganancia;
+        sNombres.textContent = cNombre;
+        sCorreo.textContent = cEmail;
+
+
     }
-
-    sTotal.textContent = total;
-    sGanancia.textContent = ganancia;
-    sNombres.textContent = cNombre;
-    sCorreo.textContent = cEmail;
-
-    //HACEMOS LA FUNCION PARA QUITAR EL DISABLED A POST-SIMULATION Y COLOCARSELO A PRE-SIMULATION
-    const contPre = document.getElementById('pre-simulation');
-    const contPost = document.getElementById('post-simulation');
-
-    contPost.classList.remove('disabled');
-    contPre.classList.add('disabled');
-
 }
 
 document.addEventListener('DOMContentLoaded', function (){
