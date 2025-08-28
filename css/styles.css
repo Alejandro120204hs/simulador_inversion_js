@@ -210,11 +210,12 @@ footer .iconos{
 
 footer a.github img{
     width: 30px;  
-    margin-right: 20px;
+    
 }
 
 footer a.correo img{
-    width: 30px; 
+    width: 30px;
+    margin-right: 20px; 
 }
 
 footer a.instagram img{
