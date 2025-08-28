@@ -19,29 +19,37 @@ function simulador(){
     let ganancia = 0;
     let total = 0;
 
-    //IDENTIFICAMOS EL VALOR DEL TIEMPO DE LA INVERSION Y DEPENDIENDO EL TIEMPO SE DARA UNA TASA DE INTERES
-    switch (cTiempo) {
-        case '1':
-            //EN ESTE CASE REALIZAREMOS EL CALCULO SI EL TIEMPO CORRESPONDE A 1 AÑO
-            ganancia = (cInversion * 0.008)* 12;
-            total = parseInt(cInversion) + parseInt(ganancia);
-            sInteres.textContent = "0.8%";
-            sTiempo.textContent = "12 MESES";
-            break;
-        case '2':
-            //EN ESTE CASE REALIZAREMOS EL CALCULO SI EL TIEMPO CORRESPONDE A 2 AÑOS
-            ganancia = (cInversion * 0.013)* 24;
-            total = parseInt(cInversion) + parseInt(ganancia);
-            sInteres.textContent = "13%";
-            sTiempo.textContent = "24 MESES";
-            break;
-        case '3':
-            //EN ESTE CASE REALIZAREMOS EL CALCULO SI EL TIEMPO CORRESPONDE A 3 AÑOS 
-            ganancia = (cInversion * 0.017)* 36
-            total = parseInt(cInversion) + parseInt(ganancia);
-            sInteres.textContent = "17%";
-            sTiempo.textContent = "36 MESES"
-            break;
+    if(cNombre == "" || cEmail == "" || cInversion == "" || cTiempo == ""){
+        
+        alert("Porfavor llene todos los campos");
+    }else{
+
+    
+
+        //IDENTIFICAMOS EL VALOR DEL TIEMPO DE LA INVERSION Y DEPENDIENDO EL TIEMPO SE DARA UNA TASA DE INTERES
+        switch (cTiempo) {
+            case '1':
+                //EN ESTE CASE REALIZAREMOS EL CALCULO SI EL TIEMPO CORRESPONDE A 1 AÑO
+                ganancia = (cInversion * 0.008)* 12;
+                total = parseInt(cInversion) + parseInt(ganancia);
+                sInteres.textContent = "0.8%";
+                sTiempo.textContent = "12 MESES";
+                break;
+            case '2':
+                //EN ESTE CASE REALIZAREMOS EL CALCULO SI EL TIEMPO CORRESPONDE A 2 AÑOS
+                ganancia = (cInversion * 0.013)* 24;
+                total = parseInt(cInversion) + parseInt(ganancia);
+                sInteres.textContent = "13%";
+                sTiempo.textContent = "24 MESES";
+                break;
+            case '3':
+                //EN ESTE CASE REALIZAREMOS EL CALCULO SI EL TIEMPO CORRESPONDE A 3 AÑOS 
+                ganancia = (cInversion * 0.017)* 36
+                total = parseInt(cInversion) + parseInt(ganancia);
+                sInteres.textContent = "17%";
+                sTiempo.textContent = "36 MESES"
+                break;
+        }
     }
 
     sTotal.textContent = total;
@@ -58,24 +66,7 @@ function simulador(){
 
 }
 
-// document.addEventListener('DOMContentLoaded', function (){
-//     document.getElementById('calcular').addEventListener('click',simulador)
-// })
-
-//LAS SIGUIENTES LINEAS DE CODIGO SON PARA QUE LA FUNCION SE EJECUTE SOLO SI LOS CAMPOS DEL FORMULARIO ESTAN COMPLETOS
-
-//ESPERAMOS QUE EL HTML CARGUE
-document.addEventListener('DOMContentLoaded', function(){
-
-    //SELECCIONAMOS EL FORMULARIO
-    const form = document.querySelector("form")
-
-    //ESCUHAMOS EL EVENTO SUBMIT(SOLO FUNCIONA SI LOS REQUIRED ESTAN COMPLETOS)
-    
-    form.addEventListener("submit",function(e){  //SE USA function(e) PORQUE ES EL PARAMETRO DE EVENTO, PUEDO COLOCAR LO QUE QUIERA SIEMPRE Y CUANDO ACCEDA SUS PARAMETROS SEA LA MISMA LETRA O PALABRA
-
-        e.preventDefault(); //EVITA QUE LA PAGINA SE CARGUE
-        simulador(); //EJECUTA LA FUNCION SI EL FORMULARIO ESTA LLENO
-    })
-
+document.addEventListener('DOMContentLoaded', function (){
+document.getElementById('calcular').addEventListener('click',simulador)
 })
+
