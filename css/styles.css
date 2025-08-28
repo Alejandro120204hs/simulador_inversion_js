@@ -191,3 +191,34 @@ input::placeholder {
 .notificacion h5 span{
     font-weight: 700;
 }
+
+footer{
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer h2{
+    color: #fff;
+    font-size: 20px;
+}
+
+footer .iconos{
+    margin-top: -7px;
+}
+
+footer a.github img{
+    width: 30px;  
+    margin-right: 20px;
+}
+
+footer a.correo img{
+    width: 30px; 
+}
+
+footer a.instagram img{
+    width: 30px; 
+    margin-left: 20px;
+}
+
