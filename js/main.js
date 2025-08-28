@@ -58,6 +58,24 @@ function simulador(){
 
 }
 
-document.addEventListener('DOMContentLoaded', function (){
-    document.getElementById('calcular').addEventListener('click',simulador)
+// document.addEventListener('DOMContentLoaded', function (){
+//     document.getElementById('calcular').addEventListener('click',simulador)
+// })
+
+//LAS SIGUIENTES LINEAS DE CODIGO SON PARA QUE LA FUNCION SE EJECUTE SOLO SI LOS CAMPOS DEL FORMULARIO ESTAN COMPLETOS
+
+//ESPERAMOS QUE EL HTML CARGUE
+document.addEventListener('DOMContentLoaded', function(){
+
+    //SELECCIONAMOS EL FORMULARIO
+    const form = document.querySelector("form")
+
+    //ESCUHAMOS EL EVENTO SUBMIT(SOLO FUNCIONA SI LOS REQUIRED ESTAN COMPLETOS)
+    
+    form.addEventListener("submit",function(e){  //SE USA function(e) PORQUE ES EL PARAMETRO DE EVENTO, PUEDO COLOCAR LO QUE QUIERA SIEMPRE Y CUANDO ACCEDA SUS PARAMETROS SEA LA MISMA LETRA O PALABRA
+
+        e.preventDefault(); //EVITA QUE LA PAGINA SE CARGUE
+        simulador(); //EJECUTA LA FUNCION SI EL FORMULARIO ESTA LLENO
+    })
+
 })
